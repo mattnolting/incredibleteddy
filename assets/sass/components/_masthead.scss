@@ -1,0 +1,10 @@
+.masthead {
+	width: 100%;
+	background: rgba(255,255,255,.8);
+	border: none;
+
+	@include media-query (sm) {
+		position: fixed;
+	}
+
+}

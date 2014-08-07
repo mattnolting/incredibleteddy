@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header_font_family;
+}
+
+h1 {
+	color: $header_font_color;
+	@include font-size($h1_font_size);
+}
+
+main.main {
+
+}
+
+p {
+	// @include rem('line-height', $paragraph_line_height);
+}
+
+a, a:link {
+	color: #3a4865;
+}

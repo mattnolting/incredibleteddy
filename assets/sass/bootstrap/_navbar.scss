@@ -8,6 +8,8 @@
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 
+$nav-breakpoint-width: 1040px;
+
 .navbar {
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
@@ -31,7 +33,7 @@
 .navbar-header {
   @include clearfix();
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     float: left;
   }
 }
@@ -61,7 +63,7 @@
     overflow-y: auto;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     width: auto;
     border-top: 0;
     box-shadow: none;
@@ -119,7 +121,7 @@
   z-index: $zindex-navbar;
   border-width: 0 0 1px;
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     border-radius: 0;
   }
 }
@@ -133,7 +135,7 @@
   z-index: $zindex-navbar-fixed;
 
   // Undo the rounded corners
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     border-radius: 0;
   }
 }
@@ -162,7 +164,7 @@
     text-decoration: none;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     .navbar > .container &,
     .navbar > .container-fluid & {
       margin-left: -$navbar-padding-horizontal;
@@ -204,7 +206,7 @@
     margin-top: 4px;
   }
 
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     display: none;
   }
 }
@@ -224,7 +226,7 @@
     line-height: $line-height-computed;
   }
 
-  @media (max-width: $grid-float-breakpoint-max) {
+  @media (max-width: $nav-breakpoint-width) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -249,7 +251,7 @@
   }
 
   // Uncollapse the nav
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $nav-breakpoint-width) {
     float: left;
     margin: 0;
 

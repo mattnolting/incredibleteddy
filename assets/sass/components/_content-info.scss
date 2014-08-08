@@ -1,7 +1,38 @@
 .content-info {
+	@include rem('padding', 20px 0);
+	background: #3a4865;
+	text-align: center;
+
+	@include media-query (sm) {
+		text-align: left;
+	}
+
+
+	a {
+		color: #fff !important;
+		@include transition(.2s);
+
+		&:hover {
+			text-decoration: none;
+			background: rgba(255,255,255,.2);
+
+			@include media-query (sm) {
+				background: none;
+			}
+
+		}
+	}
 
 	.footer-logo {
-		float: left;
+		@include rem('margin', 20px 0 0);
+		display: inline-block;
+
+		@include media-query (sm) {
+			margin: 0;
+			float: left;
+		}
+
+		&:hover { background: none; }
 	}
 
 	.copyright {

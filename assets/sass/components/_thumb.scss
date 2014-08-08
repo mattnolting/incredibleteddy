@@ -1,0 +1,82 @@
+.thumb {
+	position: relative;
+	display: none;
+	width: 210px;
+	height: 210px;
+	@include border-radius(50%);
+	border: 10px solid #fff;
+	overflow: hidden;
+	@include transition(.1s ease-in-out);
+
+	@include media-query (sm) {
+		display: inline-block;
+	}
+
+
+	&.thumb-mobile {
+		position: absolute;
+		left: 50%;
+		top: -40px;
+		display: block;
+		margin-left: -87px;
+		width: 174px;
+		height: 174px;
+
+		@include media-query (sm) {
+			display: none;
+		}
+
+	}
+
+	&.donate.first {
+		position: relative;
+		left: 50%;
+		top: 0;
+		margin-top: 0;
+		// margin-left: -105px;
+		display: none;
+		background-color: #e1023a !important;
+
+		@include media-query (sm) {
+			display: block;
+		}
+
+		&:hover {
+			top: 0;
+		}
+
+		&.thumb-mobile {
+			display: block;
+
+			@include media-query (sm) {
+				display: none;
+			}
+		}
+	}
+
+	&.donate {
+		text-indent: -9999em;
+		background-image: url('../img/g_donate-now.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		// @include media-query (sm) {
+		// 	width: 190px;
+		// 	height: 190px;
+		// }
+
+
+		&:active, &:hover, &:focus {
+			// top: -108px;
+			border: 10px solid rgba(255,255,255,.6);
+			@include box-shadow(0 0 0 18px rgba(255,255,255,.4));
+		}
+	}
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+

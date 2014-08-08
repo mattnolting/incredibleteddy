@@ -1,0 +1,115 @@
+.modal {
+	z-index: 99999;
+
+	&.pad .modal-dialog .modal-content .modal-body, &.pad .modal-dialog .modal-content .modal-header { @include media-query (sm) { padding-left: 225px; } }
+
+	.modal-dialog {
+		position: relative;
+		width: 80%;
+		left: 10%;
+		@include rem('margin', 180px 0 0);
+		@include font-size(19px);
+
+		@include media-query (sm) {
+			@include rem('margin', 20px 0 0);
+		}
+
+
+		.modal-content {
+			@include border-radius(0);
+
+			.modal-header {
+				border: none;
+				@include rem('padding', 130px 40px 40px);
+
+				@include media-query (sm) { @include rem('padding-top', 40px); }
+			}
+
+			.modal-body {
+				@include rem('padding', 0 40px 40px);
+
+				@include media-query (sm) {
+					min-height: 212px;
+				}
+			}
+
+			.modal-thumb {
+				width: 225px;
+				height: 225px;
+				display: block;
+				@include border-radius(50%);
+				border: 12px solid #fff;
+				overflow: hidden;
+				background-size: cover;
+				background-position: center top;
+				background-color: #fff;
+
+				@include media-query (sm_max) {
+					position: absolute;
+					left: 50%;
+					top: -110px;
+					margin-left: -112px;
+				}
+
+
+				@include media-query (sm) {
+					position: absolute;
+					left: -40px;
+					top: 60px;
+				}
+			}
+		}
+
+		.modal-title {
+			@include font-size(37px);
+			color: #093554;
+
+			.distance {
+				@include rem('margin-left', 12px);
+				@include font-size(20px);
+				color: #62a845;
+
+				@include media-query (sm_max) {
+					display: block;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	p { margin-bottom: 18px; }
+	a { color: #62a845; }
+}
+
+.modal {
+
+	.close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		width: 30px;
+		height: 30px;
+		display: block;
+		@include font-size(32px);
+		line-height: 1;
+		background: #b9b9b9;
+		color: #fff;
+		@include border-radius(50%);
+		@include opacity(.8);
+		@include transition(.2s);
+
+		@include media-query (sm_max) {
+			top: -140px;
+			right: 0;
+		}
+
+
+		&:hover { @include opacity(1); }
+
+		span {
+			display: block;
+			margin-top: -4px;
+			margin-left: 1px;
+		}
+	}
+}

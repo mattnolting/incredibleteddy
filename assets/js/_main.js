@@ -31,6 +31,14 @@ var Roots = {
 					masthead.removeClass('fixed');
 				}
 			});
+
+			if($('.masthead .button').length) {
+				$('.masthead .container').append('<ul class="donate-links mobile"/>');
+				$('.masthead .button').each(function(){
+					var link = $(this).clone();
+					link.appendTo('.donate-links.mobile');
+				});
+			}
 		}
 	},
 	// Home page
